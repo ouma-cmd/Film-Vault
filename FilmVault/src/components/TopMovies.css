@@ -1,0 +1,15 @@
+.card h1{
+    margin-left: 50px;
+    margin-top: 5%;
+    color: yellow;
+    font-size: 30px;
+}
+
+.card .image-card{
+    display: flex;
+    justify-content: space-around;
+}
+.card .image-card h2{
+    color: white;
+    font-size: 30px;
+}
