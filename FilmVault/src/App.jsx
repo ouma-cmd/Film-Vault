@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import TopMovies from "./components/TopMovies";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
+      <TopMovies />
     </div>
   );
 }
