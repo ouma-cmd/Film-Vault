@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
 
-function App (){
-  const [movies , setMovies]=useState([]);
+function App() {
+  const [movies, setMovies] = useState([]);
   return (
     <div>
-      <Navbar>
-        
-      </Navbar>
+      <Navbar />
+      <HeroSection />
     </div>
-  )
+  );
 }
-export default App ; 
+export default App;
