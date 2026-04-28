@@ -1,0 +1,63 @@
+.herosection {
+  margin: 20px;
+
+  padding-left: 100px;
+  display: flex;
+}
+.herosection .stars{
+  display: flex;
+  font-size: 20px;
+  margin-left: 60px;
+}
+.herosection .stars i{
+    color: yellow;
+    margin-top: 20px;
+   
+}
+.herosection .stars p {
+    margin-left: 20px;
+  
+  /* display: flex;
+  align-items: center; */
+  color: white;
+}
+.herosection .part1-heroSection {
+  width: 40%;
+}
+
+.herosection .part1-heroSection h1 {
+  margin-left: 40px;
+  font-size: 60px;
+  color: white;
+    margin-top: 50px;
+}
+
+.herosection .part1-heroSection .paragraph{
+    color: aliceblue;
+}
+.herosection .part2 img{
+    border-radius: 20px;
+}
+
+.herosection .part1-heroSection .button{
+  display: flex;
+  padding-top: 40px;
+  gap: 2rem;
+}
+.herosection .part1-heroSection .button button{
+    padding: 10px;
+      width: 40%;
+}
+.herosection .part1-heroSection .button .watch{
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+.herosection .part1-heroSection .button .view{
+background-color: black;
+color: white;
+font-size: 20px;
+border: 2px  solid rgb(43, 42, 42);
+border-radius: 10px;
+}
