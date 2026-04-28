@@ -61,3 +61,12 @@ font-size: 20px;
 border: 2px  solid rgb(43, 42, 42);
 border-radius: 10px;
 }
+
+.herosection .part1-heroSection .button .view:hover {
+  cursor: pointer;
+  background-color: rgba(107, 106, 106, 0.6);
+}
+.herosection .part1-heroSection .button .watch:hover {
+  cursor: pointer;
+  background-color: brown;
+}
