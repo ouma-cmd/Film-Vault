@@ -1,130 +1,12 @@
 import { useState } from "react";
 import "../components/Navbar.css";
 
-function Navbar({ setMovies, movies }) {
-  const [isOpen, setOpen] = useState(false);
-
-  const [movieForm, setMovieForm] = useState({
-    id: Date.now(),
-    title: "",
-    url: "",
-    description: "",
-    rating: "",
-    category: "",
-    years: "",
-    duration: "",
-  });
-
-  function handleSubmitMovieForm(e) {
-    e.preventDefault();
-    setMovies((movies) => {
-      return [...movies, movieForm];
-    });
-    saveToLocalStorege(movies);
-    e.target.reset();
-
-    // console.log(movies);
-    
-  }
+function Navbar({ setMovies, movies, setOpen, isOpen }) {
+  // make movies variables using use State
+  const moviess = useState();
 
   return (
     <div>
-      {isOpen && (
-        <div className="form-container">
-          <div className="background">
-            <form onSubmit={handleSubmitMovieForm}>
-              <input
-                type="text"
-                placeholder="Entre un titre"
-                value={movieForm.title}
-                onChange={(e) =>
-                  setMovieForm({
-                    ...movieForm,
-                    title: e.target.value,
-                  })
-                }
-              />
-              <input
-                type="text"
-                placeholder="entre un image URL"
-                value={movieForm.url}
-                onChange={(e) =>
-                  setMovieForm({
-                    ...movieForm,
-                    url: e.target.value,
-                  })
-                }
-              />
-              <input
-                type="text"
-                placeholder="Entre description"
-                value={movieForm.description}
-                onChange={(e) => {
-                  setMovieForm({
-                    ...movieForm,
-                    description: e.target.value,
-                  });
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Entre Rating"
-                value={movieForm.rating}
-                onChange={(e) => {
-                  setMovieForm({
-                    ...movieForm,
-                    rating: e.target.value,
-                  });
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Entre category"
-                value={movieForm.category}
-                onChange={(e) => {
-                  setMovieForm({
-                    ...movieForm,
-                    category: e.target.value,
-                  });
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Entre Years"
-                value={movieForm.years}
-                onChange={(e) => {
-                  setMovieForm({
-                    ...movieForm,
-                    years: e.target.value,
-                  });
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Entre duration"
-                value={movieForm.duration}
-                onChange={(e) => {
-                  setMovieForm({
-                    ...movieForm,
-                    duration: e.target.value,
-                  });
-                }}
-              />
-
-              <button className="submit" type="submit">
-                Add Movies
-              </button>
-              <button
-                className="close"
-                type="button"
-                onClick={() => setOpen(false)}
-              >
-                Close
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
       <div className="navbar-container">
         <img
           className="logo"
@@ -168,8 +50,6 @@ function Navbar({ setMovies, movies }) {
   );
 }
 
-function saveToLocalStorege(movies) {
-  localStorage.setItem("movies", JSON.stringify(movies));
-}
+
 
 export default Navbar;
