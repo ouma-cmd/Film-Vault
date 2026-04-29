@@ -44,6 +44,7 @@
   color: white;
   font-weight: bold;
   font-size: 18px;
+  border-radius: 10px;
 }
 .botton button:hover {
   cursor: pointer;
