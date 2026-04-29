@@ -22,6 +22,9 @@ function Navbar({ setMovies, movies }) {
     });
     saveToLocalStorege(movies);
     e.target.reset();
+
+    // console.log(movies);
+    
   }
 
   return (

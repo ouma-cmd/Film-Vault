@@ -1,0 +1,67 @@
+.Filtrage {
+    margin: 0 200px 0 200px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  border: 1px solid rgb(186, 9, 9) ;
+  border-radius: 20px;
+}
+.titre-Filter {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  gap: 1rem;
+}
+.barre-shearch {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.barre-shearch select {
+  font-size: 20px;
+  padding: 5px;
+  width: 250px;
+  border:none;
+  border-radius: 10px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.rating i {
+  color: yellow;
+}
+.botton {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+.botton button {
+  padding: 10px;
+  width: 140px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.botton button:hover {
+  cursor: pointer;
+}
+.part2 h1 {
+  color: white;
+  margin-left: 30px;
+}
+.part2 i {
+    color: yellow;
+    margin-right: 20px;
+}
+.part2 .card {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.part2 .card:hover {
+  cursor: pointer;
+}
