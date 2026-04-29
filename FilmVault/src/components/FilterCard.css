@@ -1,7 +1,10 @@
 .Filtrage {
+    margin: 0 200px 0 200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   color: white;
+  border: 1px solid rgb(186, 9, 9) ;
+  border-radius: 20px;
 }
 .titre-Filter {
   display: flex;
@@ -16,7 +19,10 @@
 }
 .barre-shearch select {
   font-size: 20px;
-  width: 200px;
+  padding: 5px;
+  width: 250px;
+  border:none;
+  border-radius: 10px;
 }
 .rating {
   display: flex;
