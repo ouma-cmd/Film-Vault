@@ -16,8 +16,8 @@ function App() {
     <div>
       <Navbar isOpen={isOpen} setOpen={setOpen} />
       <HeroSection />
-      <TopMovies />
-      <FilterCard />
+      <TopMovies/>
+      <FilterCard  movies={movies}/>
       {isOpen && <MovieForm setMovies={setMovies} setOpen={setOpen}/>}
     </div>
   );
