@@ -13,3 +13,11 @@
     color: white;
     font-size: 30px;
 }
+.image-card img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+ .image-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}

@@ -2,6 +2,7 @@ import '../components/TopMovies.css'
 
 function TopMovies(){
     return(
+       
         <div className='card'>
             <h1>Top 3 Movies</h1>
             <div className='image-card'>
