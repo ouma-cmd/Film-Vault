@@ -5,7 +5,7 @@ function FilterCard() {
     <div>
       <div className="Filtrage">
         <div className="titre-Filter">
-          <i class="fa-solid fa-filter"></i>
+          <i className="fa-solid fa-filter"></i>
           <h1>Filters</h1>
         </div>
         <div className="barre-shearch">
@@ -20,11 +20,11 @@ function FilterCard() {
         <div className="rating">
           <h2>Munimum Rating</h2>
           <div>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
           </div>
         </div>
         <div className="botton">
@@ -34,50 +34,65 @@ function FilterCard() {
       <div className="part2">
         <h1>All Movies</h1>
         <div className="card">
-        <div>
-          <a href="#"><img width={320} src="/card4.png" alt="" /></a> 
-          <h2>Window's Bay</h2>
-          <p>
-            {" "}
-            <i class="fa-solid fa-star"></i>
-         4,5 </p>
+          <div>
+            <a href="#">
+              <img width={320} src="/card4.png" alt="" />
+            </a>
+            <h2>Window's Bay</h2>
+            <p>
+              {" "}
+              <i className="fa-solid fa-star"></i>
+              4,5{" "}
+            </p>
+          </div>
+          <div>
+            <a href="#">
+              {" "}
+              <img width={320} src="/card5.png" alt="" />
+            </a>
+            <h2>Toy Story</h2>
+            <p>
+              {" "}
+              <i className="fa-solid fa-star"></i>
+              4,5{" "}
+            </p>
+          </div>
+          <div>
+            <a href="#">
+              <img width={350} src="/card6.png" alt="" />
+            </a>
+            <h2>Mtiny</h2>
+            <p>
+              {" "}
+              <i className="fa-solid fa-star"></i>
+              4,5{" "}
+            </p>
+          </div>
+          <div>
+            <a href="#">
+              {" "}
+              <img width={310} src="/card7.png" alt="" />
+            </a>
+            <h2>Godzila</h2>
+            <p>
+              {" "}
+              <i className="fa-solid fa-star"></i>
+              4,5{" "}
+            </p>
+          </div>
+          <div>
+            <a href="#">
+              <img width={330} src="/card8.png" alt="" />
+            </a>
+            <h2>Street Fighter</h2>
+            <p>
+              {" "}
+              <i className="fa-solid fa-star"></i>
+              4,5{" "}
+            </p>
+          </div>
         </div>
-        <div>
-         <a href="#"> <img width={320} src="/card5.png" alt="" /></a>
-          <h2>Toy Story</h2>
-           <p>
-            {" "}
-            <i class="fa-solid fa-star"></i>
-         4,5 </p>
-        </div>
-        <div>
-        <a href="#"><img width={350} src="/card6.png" alt="" /></a>  
-          <h2>Mtiny</h2>
-           <p>
-            {" "}
-            <i class="fa-solid fa-star"></i>
-         4,5 </p>
-        </div>
-        <div>
-         <a href="#"> <img width={310} src="/card7.png" alt="" /></a>
-          <h2>Godzila</h2>
-         <p>
-            {" "}
-            <i class="fa-solid fa-star"></i>
-         4,5 </p>
-        </div>
-        <div>
-          <a href="#"><img width={330} src="/card8.png" alt="" /></a>
-          <h2>Street Fighter</h2>
-         <p>
-            {" "}
-            <i class="fa-solid fa-star"></i>
-         4,5 </p>
-        </div>
-       
-      
       </div>
-    </div>
     </div>
   );
 }
