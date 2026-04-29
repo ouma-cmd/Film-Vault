@@ -1,35 +1,122 @@
 import { useState } from "react";
 import "../components/Navbar.css";
 
-function Navbar({ setMovies }) {
-
+function Navbar({ setMovies, movies }) {
   const [isOpen, setOpen] = useState(false);
-  const [title, istitle] = useState("");
-  const [image, isImage] = useState("");
 
-  function addMovie() {
-    // get movie data from form
-    const newmovies = {
-      title: title,
-      image: image,
-    };
-    setMovies((prev) => prev.concat({newmovies}));
+  const [movieForm, setMovieForm] = useState({
+    id: Date.now(),
+    title: "",
+    url: "",
+    description: "",
+    rating: "",
+    category: "",
+    years: "",
+    duration: "",
+  });
+
+  function handleSubmitMovieForm(e) {
+    e.preventDefault();
+    setMovies((movies) => {
+      return [...movies, movieForm];
+    });
+    saveToLocalStorege(movies);
+    e.target.reset();
   }
+
   return (
     <div>
       {isOpen && (
         <div className="form-container">
           <div className="background">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <input type="text" placeholder="Entre un titre" />
-              <input type="text" placeholder="entre un image URL" />
+            <form onSubmit={handleSubmitMovieForm}>
+              <input
+                type="text"
+                placeholder="Entre un titre"
+                value={movieForm.title}
+                onChange={(e) =>
+                  setMovieForm({
+                    ...movieForm,
+                    title: e.target.value,
+                  })
+                }
+              />
+              <input
+                type="text"
+                placeholder="entre un image URL"
+                value={movieForm.url}
+                onChange={(e) =>
+                  setMovieForm({
+                    ...movieForm,
+                    url: e.target.value,
+                  })
+                }
+              />
+              <input
+                type="text"
+                placeholder="Entre description"
+                value={movieForm.description}
+                onChange={(e) => {
+                  setMovieForm({
+                    ...movieForm,
+                    description: e.target.value,
+                  });
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Entre Rating"
+                value={movieForm.rating}
+                onChange={(e) => {
+                  setMovieForm({
+                    ...movieForm,
+                    rating: e.target.value,
+                  });
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Entre category"
+                value={movieForm.category}
+                onChange={(e) => {
+                  setMovieForm({
+                    ...movieForm,
+                    category: e.target.value,
+                  });
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Entre Years"
+                value={movieForm.years}
+                onChange={(e) => {
+                  setMovieForm({
+                    ...movieForm,
+                    years: e.target.value,
+                  });
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Entre duration"
+                value={movieForm.duration}
+                onChange={(e) => {
+                  setMovieForm({
+                    ...movieForm,
+                    duration: e.target.value,
+                  });
+                }}
+              />
+
               <button className="submit" type="submit">
                 Add Movies
               </button>
               <button
                 className="close"
                 type="button"
-                onClick={() => setOpen(false)}>Close
+                onClick={() => setOpen(false)}
+              >
+                Close
               </button>
             </form>
           </div>
@@ -68,12 +155,18 @@ function Navbar({ setMovies }) {
           <button
             type="button"
             className="button"
-            onClick={() => setOpen(!isOpen)}>+ Add movies
+            onClick={() => setOpen(!isOpen)}
+          >
+            + Add movies
           </button>
         </div>
       </div>
     </div>
   );
+}
+
+function saveToLocalStorege(movies) {
+  localStorage.setItem("movies", JSON.stringify(movies));
 }
 
 export default Navbar;

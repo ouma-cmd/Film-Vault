@@ -65,7 +65,7 @@
   position: relative;
   width: 40%;
   top: 200px;
-  margin-left: 700px;
+  margin-left: 560px;
   padding: 10px;
 }
 .form-container form input {
@@ -78,6 +78,7 @@
 
 .form-container form button {
   border-radius: 20px;
+  margin-left: 20px;
   width: 200px;
   padding: 10px;
   font-size: 18px;
