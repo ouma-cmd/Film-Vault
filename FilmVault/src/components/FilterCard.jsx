@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "../components/FilterCard.css";
+import DetailsFilterCard from "../components/DetailsFilterCard";
+import MovieCard from "./MovieCard";
 
 function FilterCard({ movies }) {
+  const [selectMovies, setselectMovies] = useState();
+  //  console.log(movies);
+  //  console.log(selectMovies);
+
   return (
     <div>
       <div className="Filtrage">
@@ -33,78 +40,11 @@ function FilterCard({ movies }) {
       </div>
       <div className="part2">
         <h1>All Movies</h1>
-
         <div className="movies-container">
-          {movies?.map((movie) => (
-            <div key={movie.id} className="card2">
-              <img src={movie.url} alt={movie.title} />
-              <h3>{movie.title}</h3>
-              <p>
-                <i className="fa-solid fa-star"></i>
-                {movie.rating}
-              </p>
-            </div>
+          {movies?.map((movie, i) => (
+            <MovieCard key={i} movie={movie} />
           ))}
         </div>
-        {/* <div className="card">
-            <div>
-              <a href="#">
-                <img width={320} src="/card4.png" alt="" />
-              </a>
-              <h2>Window's Bay</h2>
-              <p>
-                {" "}
-                <i className="fa-solid fa-star"></i>
-                4,5{" "}
-              </p>
-            </div>
-            <div>
-              <a href="#">
-                {" "}
-                <img width={320} src="/card5.png" alt="" />
-              </a>
-              <h2>Toy Story</h2>
-              <p>
-                {" "}
-                <i className="fa-solid fa-star"></i>
-                4,5{" "}
-              </p>
-            </div>
-            <div>
-              <a href="#">
-                <img width={350} src="/card6.png" alt="" />
-              </a>
-              <h2>Mtiny</h2>
-              <p>
-                {" "}
-                <i className="fa-solid fa-star"></i>
-                4,5{" "}
-              </p>
-            </div>
-            <div>
-              <a href="#">
-                {" "}
-                <img width={310} src="/card7.png" alt="" />
-              </a>
-              <h2>Godzila</h2>
-              <p>
-                {" "}
-                <i className="fa-solid fa-star"></i>
-                4,5{" "}
-              </p>
-            </div>
-            <div>
-              <a href="#">
-                <img width={330} src="/card8.png" alt="" />
-              </a>
-              <h2>Street Fighter</h2>
-              <p>
-                {" "}
-                <i className="fa-solid fa-star"></i>
-                4,5{" "}
-              </p>
-            </div> */}
-        {/* </div> */}
       </div>
     </div>
   );

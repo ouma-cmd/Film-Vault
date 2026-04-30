@@ -2,11 +2,10 @@ import { useState } from "react";
 import "../components/Navbar.css";
 import { movies } from "../moviesStore";
 
-const MovieForm = ({setMovies , setOpen}) => {
+const MovieForm = ({ setMovies, setOpen }) => {
   // make state for form inputs
   const [currentMovies, setCurrentMovies] = useState(movies);
   const [movieForm, setMovieForm] = useState({
-  
     title: "",
     url: "",
     description: "",
@@ -19,17 +18,17 @@ const MovieForm = ({setMovies , setOpen}) => {
   // make onsubmit function
   const onSubmitMovie = (e) => {
     e.preventDefault();
+    console.log(movieForm);
 
     // finish logic
     setMovies((movies) => {
-      return [...movies, movieForm];
+      return [...movies, { ...movieForm, id: Date.now() }];
     });
-   
-    
-    saveToLocalStorege(movies);
-    e.target.reset();
 
-    // console.log(movies);
+    // saveToLocalStorege(movieForm);
+    localStorage.setItem("movies", JSON.stringify(movieForm));
+    
+    e.target.reset();
   };
 
   return (
@@ -130,9 +129,5 @@ const MovieForm = ({setMovies , setOpen}) => {
     </div>
   );
 };
-
-function saveToLocalStorege(movies) {
-  localStorage.setItem("movies", JSON.stringify(movies));
-}
 
 export default MovieForm;

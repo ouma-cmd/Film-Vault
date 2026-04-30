@@ -11,14 +11,14 @@ function App() {
 
   const [movies, setMovies] = useState([]);
 
-
   return (
     <div>
       <Navbar isOpen={isOpen} setOpen={setOpen} />
       <HeroSection />
-      <TopMovies/>
-      <FilterCard  movies={movies}/>
-      {isOpen && <MovieForm setMovies={setMovies} setOpen={setOpen}/>}
+      <TopMovies />
+      <FilterCard movies={movies} />
+
+      {isOpen && <MovieForm setMovies={setMovies} setOpen={setOpen} />}
     </div>
   );
 }
