@@ -1,4 +1,3 @@
-
 import "../components/HeroSection.css";
 
 function HeroSection() {
@@ -8,11 +7,11 @@ function HeroSection() {
         <h1>Jack Ryan</h1>
         <div className="stars">
           <div>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
           </div>
           <div>
             <p>4,5/5</p>
@@ -25,13 +24,21 @@ function HeroSection() {
           adipisicing elit. Facere, error! Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Dicta, corrupti.
         </p>
-          <div className="button">
-            <button className="watch"> <i class="fa-solid fa-circle-play"></i> Watch</button>
-            <button className="view" >View Details</button>
-          </div>
+        <div className="button">
+          <button className="watch">
+            {" "}
+            <i className="fa-solid fa-circle-play"></i> Watch
+          </button>
+          <button className="view">View Details</button>
+        </div>
       </div>
       <div className="part2">
-        <img width={1000} height={430} src="/HeroSection.png" alt="Hero Section" />
+        <img
+          width={1000}
+          height={430}
+          src="/HeroSection.png"
+          alt="Hero Section"
+        />
       </div>
     </div>
   );

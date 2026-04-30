@@ -35,7 +35,6 @@ function FilterCard({ movies }) {
         <h1>All Movies</h1>
 
         <div className="movies-container">
-          
           {movies?.map((movie) => (
             <div key={movie.id} className="card2">
               <img src={movie.url} alt={movie.title} />

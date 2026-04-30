@@ -1,40 +1,12 @@
 import { useState } from "react";
 import "../components/Navbar.css";
 
-function Navbar({ setMovies }) {
+function Navbar({ setMovies, movies, setOpen, isOpen }) {
+  // make movies variables using use State
+  const moviess = useState();
 
-  const [isOpen, setOpen] = useState(false);
-  const [title, istitle] = useState("");
-  const [image, isImage] = useState("");
-
-  function addMovie() {
-    // get movie data from form
-    const newmovies = {
-      title: title,
-      image: image,
-    };
-    setMovies((prev) => prev.concat({newmovies}));
-  }
   return (
     <div>
-      {isOpen && (
-        <div className="form-container">
-          <div className="background">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <input type="text" placeholder="Entre un titre" />
-              <input type="text" placeholder="entre un image URL" />
-              <button className="submit" type="submit">
-                Add Movies
-              </button>
-              <button
-                className="close"
-                type="button"
-                onClick={() => setOpen(false)}>Close
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
       <div className="navbar-container">
         <img
           className="logo"
@@ -68,12 +40,16 @@ function Navbar({ setMovies }) {
           <button
             type="button"
             className="button"
-            onClick={() => setOpen(!isOpen)}>+ Add movies
+            onClick={() => setOpen(!isOpen)}
+          >
+            + Add movies
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+
 
 export default Navbar;

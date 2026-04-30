@@ -3,15 +3,22 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TopMovies from "./components/TopMovies";
 import FilterCard from "./components/FilterCard";
+import MovieForm from "./components/MovieForm";
 
 function App() {
+  // make state thqt handles showing popup form (create new movie)
+  const [isOpen, setOpen] = useState(false);
+
   const [movies, setMovies] = useState([]);
+
+
   return (
     <div>
-      <Navbar />
+      <Navbar isOpen={isOpen} setOpen={setOpen} />
       <HeroSection />
-      <TopMovies />
-      <FilterCard />
+      <TopMovies/>
+      <FilterCard  movies={movies}/>
+      {isOpen && <MovieForm setMovies={setMovies} setOpen={setOpen}/>}
     </div>
   );
 }
