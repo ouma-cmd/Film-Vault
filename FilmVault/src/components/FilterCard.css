@@ -1,9 +1,9 @@
 .Filtrage {
-    margin: 0 200px 0 200px;
+  margin: 0 200px 0 200px;
   display: flex;
   justify-content: space-around;
   color: white;
-  border: 1px solid rgb(186, 9, 9) ;
+  border: 1px solid rgb(186, 9, 9);
   border-radius: 20px;
 }
 .titre-Filter {
@@ -21,7 +21,7 @@
   font-size: 20px;
   padding: 5px;
   width: 250px;
-  border:none;
+  border: none;
   border-radius: 10px;
 }
 .rating {
@@ -53,9 +53,9 @@
   color: white;
   margin-left: 30px;
 }
-.part2  p i {
-    color: yellow;
-    margin-right: 20px;
+.part2 p i {
+  color: yellow;
+  margin-right: 20px;
 }
 .part2 .card h3 {
   display: flex;
@@ -67,7 +67,7 @@
 }
 .movies-container {
   display: grid;
-  grid-template-columns:repeat(4, 1fr);;
+  grid-template-columns: repeat(4, 1fr);
   padding: 20px;
   gap: 100px;
 }
@@ -83,7 +83,6 @@
   cursor: pointer;
 }
 
-
 /* image */
 .card2 img {
   width: 100%;
@@ -97,4 +96,31 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
+.details-holder {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+.details-card {
+  margin-left: 10vh;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.details-holder .button {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 420px;
+}
+.details-holder .button button {
+  background-color: red;
+  padding: 10px;
+  width: 100px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+}
